@@ -39,6 +39,7 @@ def predict(data: PropertyInput):
     result = predict_price(data)
     return PriceResponse(**result)
 
+
 # This mounts the "frontend" directory to the root path "/".
 # html=True tells FastAPI to automatically serve "index.html" when someone visits "/"
 app.mount("/", StaticFiles(directory="frontend", html=True), name="frontend")
